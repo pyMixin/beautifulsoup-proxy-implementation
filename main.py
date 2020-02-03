@@ -30,13 +30,14 @@ def make_soup(url, retry):
 
 
 def walmart():
-    url = ["https://www.walmart.com/ip/2-pack-Equate-On-The-Go-First-Aid-Kit-85-Items/153083751?athcpid=153083751&athpgid=athenaItemPage&athcgid=null&athznid=PWBAB&athieid=v0&athstid=CS020&athguid=dea36711-8ac-17007b9fc522ea&athancid=null&athena=true",
-            "https://www.walmart.com/ip/2-pack-Equate-On-The-Go-First-Aid-Kit-85-Items/153083751?athcpid=153083751&athpgid=athenaItemPage&athcgid=null&athznid=PWBAB&athieid=v0&athstid=CS020&athguid=dea36711-8ac-17007b9fc522ea&athancid=null&athena=true"]
+    url = ["https://www.walmart.com/ip/Ripple-Plant-Based-Protein-Powder-Vanilla-20g-Protein-14-3oz/693580252"]
     for i in range(len(url)):
         try:
             print('WALMART Index ' + str(i) + ' in URLs is: ' + url[i])
             soup = make_soup(url[i], 5)
-            #print(soup)
+            print(soup)
+        except:
+            print("Error")
 
 
 walmart()
